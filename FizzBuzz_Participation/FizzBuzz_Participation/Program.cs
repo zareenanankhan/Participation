@@ -14,7 +14,7 @@ namespace FizzBuzz_Participation
             //BOOLEAN OPERATORS:
             //      OR  = ||
             //      AND = &&
-            number = 15;
+            
             if ((number % 3 == 0) && (number % 5 == 0))
                 
             {
