@@ -130,10 +130,6 @@ namespace ProcessingCSV
 
             Console.WriteLine($"Total sales is {sum.ToString("C2")}.");
 
-
-
-           
-
             Console.ReadKey();
         }
     }   
