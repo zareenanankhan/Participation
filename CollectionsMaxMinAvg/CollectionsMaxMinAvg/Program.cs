@@ -9,22 +9,45 @@ namespace CollectionsMaxMinAvg
         {
             double examgrade;
             //collaborated with Rysa Khan
-            //assumes that there are a total of five exams
             //define all variables
             List<double> exams = new List<double>();
 
             Console.WriteLine("How many exam grades are there?");
             int NumOfExam = Convert.ToInt32(Console.ReadLine());
 
-            for (int i =0; i <=NumOfExam; i++)
+            for (int i =0; i < NumOfExam; i++)
             {
                 Console.WriteLine("Enter exam grade");
                 examgrade = Convert.ToDouble(Console.ReadLine());
                 exams.Add(examgrade);
 
             }
+            
+            Console.WriteLine("The following is your list of exam grades");
+            exams.ForEach(Console.WriteLine);
 
-            Console.WriteLine(exams);
+            double maxvalue = exams[0];
+            double minvalue = exams[0];
+            double avgvalue = 0;
+            double sum = 0;
+            
+            for (int i=0; i < exams.Count; i++)
+            {
+                if (maxvalue < exams[i])
+                    maxvalue = exams[i];
+                if (minvalue > exams[i])
+                    minvalue = exams[i];
+                    sum += exams[i];
+            }
+
+            avgvalue = sum / exams.Count;
+
+            Console.WriteLine($"The highest exam grade is {maxvalue}");
+            Console.WriteLine($"The lowest exam grade is {minvalue}");
+            Console.WriteLine($"The average exam grade is {avgvalue}");
+
+           
+           
 
             Console.ReadLine();
 
