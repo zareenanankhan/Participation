@@ -28,5 +28,15 @@ namespace ClassesToys
             Manufacturer = " ";
         }
 
+        public void updatenotes(string notesmessage)
+        {
+            Notes = notesmessage;
+        }
+
+        public string getnotes()
+        {
+            return Notes;
+        }
+
     }
 }
